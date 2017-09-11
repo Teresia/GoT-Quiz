@@ -1,0 +1,12 @@
+.hero-bg{
+	background-color: #001929 !important;
+	background-image: url("img/bubbles.jpg")!important;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+.quizPic{
+		background-image: url("img/hat.jpg")!important;
+
+}
