@@ -40,7 +40,7 @@
   <h1 class="display-3">{{ quiz.name }}</h1>
   <p class="lead">{{ quiz.description }}</p>
   <p class="lead">
-    <a class="btn btn-lg mainBtn" href="question.html" role="button">Sätt igång</a>
+    <a class="btn btn-lg mainBtn" href="{% url 'question_page' quiz_number 1 %}" role="button">Sätt igång</a>
   </p>
 </div>
 

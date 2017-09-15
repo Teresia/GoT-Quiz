@@ -29,29 +29,31 @@
 <body>
 	<div class="container">
 		<div class="questionContainer">
-			<h1>Fråga 1</h1>
-			<p class="ingress">Hur många har dött?</p>
+			<h1>Fråga {{ question_number }}</h1>
+			<p class="ingress"> {{ question }}</p>
 			<div class="quizCard questionImg">
 			</div>
 			<div class="answerContainer">
+			<a href="{% url 'completed_page' quiz_number %}"">
 			<div class="card col-sm-6 answerCard">
 			<div class="ingress">
-					Svar på frågan
+					{{ answer1 }}
 			</div>
 			</div>
+			</a>
 			<div class="card col-sm-6 answerCard">
 			<div class="ingress">
-					Svar på frågan
-			</div>
-			</div>
-			<div class="card col-sm-6 answerCard">
-			<div class="ingress">
-					Svar på frågan
+					{{ answer2 }}
 			</div>
 			</div>
 			<div class="card col-sm-6 answerCard">
 			<div class="ingress">
-					Svar på frågan
+					{{ answer3 }}
+			</div>
+			</div>
+			<div class="card col-sm-6 answerCard">
+			<div class="ingress">
+					{{ answer4 }}
 			</div>
 			</div>
 			</div>

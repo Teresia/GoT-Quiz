@@ -67,7 +67,7 @@
         <div class="col-md-7">
           <h2 class="featurette-heading">{{ quiz.name }} <span class="text-muted">The easy one</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna</p>
-          <a class="btn btn-lg mainBtn" href="quiz/{{ quiz.quiz_number }}/" role="button">Till quizet</a>
+          <a class="btn btn-lg mainBtn" href="{% url 'quiz_page' quiz.quiz_number %}" role="button">Till quizet</a>
         </div>
         <div class="col-md-5">
           <img class="img-circle quizPic" src="/static/css/img/jon.jpg" alt="Generic placeholder image" width="300" height="300">
@@ -83,8 +83,7 @@
 
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        
       </footer>
 
     </div><!-- /.container -->

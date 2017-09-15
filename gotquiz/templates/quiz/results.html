@@ -30,10 +30,10 @@
 	<div class="container">
 		<div class="questionContainer">
 			<h1>Grattis!</h1>
-			<p class="ingress">Du fick <strong>ALLA RÄTT</strong></p>
+			<p class="ingress">Du fick <strong>{{ correct }}</strong> av {{ total }}</p>
 			<div class="quizCard questionImg">
 			</div>
-			    <a class="btn btn-lg mainBtn" href="index.html" role="button">Fler quiz tack!</a>
+			    <a class="btn btn-lg mainBtn" href="{% url 'start_page' %}" role="button">Fler quiz tack!</a>
 
 
 
