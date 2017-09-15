@@ -61,19 +61,20 @@
 
 
       <!-- START THE FEATURETTES -->
+{% for quiz in quizzes %}
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">The Seven Kingdoms <span class="text-muted">The easy one</span></h2>
+          <h2 class="featurette-heading">{{ quiz.name }} <span class="text-muted">The easy one</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna</p>
-          <a class="btn btn-lg mainBtn" href="quiz.html" role="button">Till quizet</a>
+          <a class="btn btn-lg mainBtn" href="quiz/{{ quiz.quiz_number }}/" role="button">Till quizet</a>
         </div>
         <div class="col-md-5">
           <img class="img-circle quizPic" src="/static/css/img/jon.jpg" alt="Generic placeholder image" width="300" height="300">
         </div>
       </div>
 
-
+{% endfor %}
 
       <hr class="featurette-divider">
 

@@ -30,15 +30,15 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="/../../static/css/carousel.css" rel="stylesheet">
-    <link href="../static/css/style.css" rel="stylesheet">
+    <link href="/static/css/carousel.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
   </head>
 <!-- NAVBAR
 ================================================== -->
   <body class="quizPage">
 <div class="jumbotron quizCard">
-  <h1 class="display-3">The Seven Kingdoms</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <h1 class="display-3">{{ quiz.name }}</h1>
+  <p class="lead">{{ quiz.description }}</p>
   <p class="lead">
     <a class="btn btn-lg mainBtn" href="question.html" role="button">Sätt igång</a>
   </p>
