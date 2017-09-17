@@ -34,28 +34,28 @@
 			<div class="quizCard questionImg">
 			</div>
 			<div class="answerContainer">
-			<a href="{% url 'completed_page' quiz_number %}"">
-			<div class="card col-sm-6 answerCard">
-			<div class="ingress">
-					{{ answer1 }}
-			</div>
-			</div>
-			</a>
-			<div class="card col-sm-6 answerCard">
-			<div class="ingress">
-					{{ answer2 }}
-			</div>
-			</div>
-			<div class="card col-sm-6 answerCard">
-			<div class="ingress">
-					{{ answer3 }}
-			</div>
-			</div>
-			<div class="card col-sm-6 answerCard">
-			<div class="ingress">
-					{{ answer4 }}
-			</div>
-			</div>
+
+				<form action="{% url "answer_page" quiz.quiz_number question_number %}" method="post">
+				{% csrf_token %}
+					<div class="btn-group" data-toggle="buttons">
+						<label class="btn btn-primary">
+						<input type="radio" name="answer" value ="1" id="option1" autocomplete="off"> {{ answer1 }}
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="answer" value ="2"" id="option2" autocomplete="off"> {{ answer2 }}
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="answer" value ="3" id="option3" autocomplete="off"> {{ answer3 }}
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" nname="answer" value ="4" id="option" autocomplete="off"> {{ answer4 }}
+						</label>
+					</div>
+					<br><br>
+					<button type="submit" class="btn mainBtn">Nästa</button>
+				</form>
+
+
 			</div>
 		</div>
 	</div>
@@ -64,6 +64,6 @@
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
 </body>
 </html>

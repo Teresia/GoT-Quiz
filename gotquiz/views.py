@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from gotquiz.models import Quiz
+from django.shortcuts import redirect
 
 def startpage(request):
 	context = {
@@ -26,10 +27,26 @@ def question(request, quiz_number, question_number):
 	    "answer1": question.answer1,
     	"answer2": question.answer2,
 	    "answer3": question.answer3,
+	    "answer4": question.answer4,
 	    "quiz": quiz,
-		"quiz_number": quiz_number,
+		"ßquiz_number": quiz_number,
 	}
 	return render(request, "quiz/question.html", context)
+
+def answer(request, quiz_number, question_number):
+    saved_answers = request.session.get(quiz_number, {})
+    answer = int(request.POST["answer"])
+    saved_answers[question_number] = answer
+    request.session[quiz_number] = saved_answers
+
+    question_number = int(question_number)
+    quiz = Quiz.objects.get(quiz_number=quiz_number)
+    num_questions = quiz.questions.count()
+    if num_questions <= question_number:
+        return redirect("completed_page", quiz_number)
+    else:
+        return redirect("question_page", quiz_number, question_number + 1)
+
 
 def completed(request, quiz_number):
 	context = {
