@@ -27,7 +27,7 @@ SECRET_KEY = 'fl&r(hn!%^bbcnw(8fz^c!3eg^cw(ij(k*ynchq86@p-#7@i88'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-'quiet-river-82175.herokuapp.com'
+    '*'
 ]
 
 

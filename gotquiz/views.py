@@ -61,6 +61,7 @@ def completed(request, quiz_number):
 	context = {
     "correct": num_correct_answers,
     "total": questions.count(),
+    "quizzes": Quiz.objects.all(),
     }
 
 
