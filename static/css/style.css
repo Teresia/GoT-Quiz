@@ -5,6 +5,14 @@
     background-color: grey;
 }
 
+.completedPage {
+    background-image: url("img/bubbles.jpg");
+    background-color: grey;
+}
+
+
+
+
 .startpage{
 	background-color: #001929 !important;
 	background-image: url("img/spacecat.jpg")!important;
