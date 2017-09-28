@@ -1,13 +1,13 @@
 
 
 .quizPage {
-    background-image: url("/static/img/bubbles.jpg");
+    background-image: url("img/bubbles.jpg");
     background-color: grey;
 }
 
 .startpage{
 	background-color: #001929 !important;
-	background-image: url("/static/img/spacecat.jpg")!important;
+	background-image: url("img/spacecat.jpg")!important;
 	background-size: auto;
     background-position: center;
 	background-repeat: no-repeat;
