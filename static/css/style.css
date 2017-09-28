@@ -1,7 +1,7 @@
 
 
 .quizPage {
-    background-image: url("img/bubbles.jpg");
+    background-image: url("img/spacecat.jpg");
     background-color: grey;
 }
 
@@ -10,7 +10,10 @@
     background-color: grey;
 }
 
-
+.resultsHeading{
+	color: white !important;
+	font-size: 64px;
+}
 
 
 .startpage{
@@ -57,10 +60,22 @@ h1{
 	font-size: 64px;
 }
 
+
+
 .ingress{
 	font-size: 18px;
 }
 
+.resultIngress{
+	font-size: 18px;
+	color: white;
+
+}
+
+.resultIngress strong{
+	font-size: 24px;
+	
+}
 
 .quizCard{
 	max-width: 600px;
