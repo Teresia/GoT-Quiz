@@ -37,22 +37,11 @@
 
 				<form action="{% url "answer_page" quiz.quiz_number question_number %}" method="post">
 				{% csrf_token %}
-					<div class="btn-group" data-toggle="buttons">
-						<label class="btn btn-primary">
-						<input type="radio" name="answer" value ="1" id="option1" autocomplete="off"> {{ answer1 }}
-						</label>
-						<label class="btn btn-primary">
-							<input type="radio" name="answer" value ="2"" id="option2" autocomplete="off"> {{ answer2 }}
-						</label>
-						<label class="btn btn-primary">
-							<input type="radio" name="answer" value ="3" id="option3" autocomplete="off"> {{ answer3 }}
-						</label>
-						<label class="btn btn-primary">
-							<input type="radio" nname="answer" value ="4" id="option" autocomplete="off"> {{ answer4 }}
-						</label>
-					</div>
-					<br><br>
-					<button type="submit" class="btn mainBtn">Nästa</button>
+					
+					<button type="submit" name="answer" value ="1" class="btn mainBtn">{{ answer1 }}</button>
+					<button type="submit" name="answer" value ="2" class="btn mainBtn">{{ answer2 }}</button>
+					<button type="submit" name="answer" value ="3" class="btn mainBtn">{{ answer3 }}</button>
+					<button type="submit" name="answer" value ="4" class="btn mainBtn">{{ answer4 }}</button>
 				</form>
 
 

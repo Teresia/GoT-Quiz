@@ -21,11 +21,13 @@
 	background-color: #011127;
 	color: white;
 	min-width: 180px;
+    margin-bottom: 5px;
+    padding: 16px;
 
 }
 
 .mainBtn:hover{
-	background-color: #1b314f;
+	background-color: #132d5b;
 	color: white;
 }
 
@@ -66,6 +68,9 @@ h1{
 
 }
 
+
+
+
 .questionImg{
 	background-color: #011127;
 	background-image: url("img/map.jpg");
@@ -81,7 +86,23 @@ h1{
     margin-bottom: 24px;
 }
 .answerContainer{
+	width: 100%;
 }
+
+.answerContainer button{
+	width: 49% !important;
+
+}
+
+@media only screen and (max-width: 460px) {
+
+.answerContainer button{
+	width: 100% !important;
+
+}
+
+}
+
 .answerCard{
 	padding: 12px 6px;
 }
