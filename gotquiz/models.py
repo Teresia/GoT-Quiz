@@ -13,6 +13,7 @@ class Question(models.Model):
 	answer2 = models.CharField(max_length=100)
 	answer3 = models.CharField(max_length=100)
 	answer4 = models.CharField(max_length=100)
+	picture = models.TextField()
 	correct = models.PositiveIntegerField()
 	quiz = models.ForeignKey(Quiz, related_name="questions")
 	def __str__(self):

@@ -28,8 +28,9 @@ def question(request, quiz_number, question_number):
     	"answer2": question.answer2,
 	    "answer3": question.answer3,
 	    "answer4": question.answer4,
+	    "picture": question.picture,
 	    "quiz": quiz,
-		"ßquiz_number": quiz_number,
+		"quiz_number": quiz_number,
 	}
 	return render(request, "quiz/question.html", context)
 

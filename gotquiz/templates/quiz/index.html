@@ -34,21 +34,14 @@
   </head>
 <!-- NAVBAR
 ================================================== -->
-  <body>
+  <body class="startpage">
 
     <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner" role="listbox">
-        <div class="item active hero-bg">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1 class="mainHeading">Quiz of Thrones</h1>
-              <p>Winter is coming.</p>
-            </div>
-          </div>
-        </div>
-    </div><!-- /.carousel -->
+
+              <h1 class="mainHeading">The Code Quiz</h1>
+
+
 
 
     <!-- Marketing messaging and featurettes
@@ -63,28 +56,15 @@
       <!-- START THE FEATURETTES -->
 {% for quiz in quizzes %}
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">{{ quiz.name }}</h2>
-          <p class="lead">{{ quiz.number }}</p>
-          <a class="btn btn-lg mainBtn" href="{% url 'quiz_page' quiz.quiz_number %}" role="button">Till quizet</a>
-        </div>
-        <div class="col-md-5">
-          <img class="img-circle quizPic" src="/static/css/img/jon.jpg" alt="Generic placeholder image" width="300" height="300">
+      <div class="row">
+        <div class="col-md-12">
+          <a class="btn btn-lg mainBtn" href="{% url 'quiz_page' quiz.quiz_number %}" role="button">{{ quiz.name }}</a>
         </div>
       </div>
 
 {% endfor %}
 
-      <hr class="featurette-divider">
 
-      <!-- /END THE FEATURETTES -->
-
-
-      <!-- FOOTER -->
-      <footer>
-        
-      </footer>
 
     </div><!-- /.container -->
 

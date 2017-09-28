@@ -40,20 +40,7 @@
 			</div>
 		</div>
 	</div>
-	{% for quiz in quizzes %}
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">{{ quiz.name }}</h2>
-          <p class="lead">{{ quiz.number }}</p>
-          <a class="btn btn-lg mainBtn" href="{% url 'quiz_page' quiz.quiz_number %}" role="button">Till quizet</a>
-        </div>
-        <div class="col-md-5">
-          <img class="img-circle quizPic" src="/static/css/img/jon.jpg" alt="Generic placeholder image" width="300" height="300">
-        </div>
-      </div>
-
-{% endfor %}
 
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
